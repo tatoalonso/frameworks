@@ -1,0 +1,28 @@
+request_querystring:
+    path: /querystring/
+    defaults: { _controller: AppBundle:Default:requestQuerystring }
+
+request_post:
+    path: /post/
+    defaults: { _controller: AppBundle:Default:requestPost }
+    methods: [POST]
+
+calculator_add:
+    path: /add/{param1}/{param2}
+    defaults: { _controller: AppBundle:Calculator:add }
+    methods: [GET]
+
+calculator_substract:
+    path: /substract
+    defaults: { _controller: AppBundle:Calculator:substract }
+    methods: [GET]
+
+calculator_multiply:
+    path: /multiply
+    defaults: { _controller: AppBundle:Calculator:multiply }
+    methods: [POST]
+
+calculator_divide:
+    path: /divide/{param1}
+    defaults: { _controller: AppBundle:Calculator:divide }
+    methods: [GET]
