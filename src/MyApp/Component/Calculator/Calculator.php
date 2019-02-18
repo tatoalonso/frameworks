@@ -11,7 +11,7 @@ class Calculator
         return $number1 + $number2;
     }
 
-    public function substract( $number1,  $number2)
+    public function subtract( $number1,  $number2)
     {
         return $number1 - $number2;
     }

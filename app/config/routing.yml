@@ -1,21 +1,17 @@
-request_querystring:
-    path: /querystring/
-    defaults: { _controller: AppBundle:Default:requestQuerystring }
 
-request_post:
-    path: /post/
-    defaults: { _controller: AppBundle:Default:requestPost }
-    methods: [POST]
 
 calculator_add:
     path: /add/{param1}/{param2}
     defaults: { _controller: AppBundle:Calculator:add }
     methods: [GET]
+    requirements:
+        param1: '\d+'
+        param2: '\d+'
 
-calculator_substract:
-    path: /substract
-    defaults: { _controller: AppBundle:Calculator:substract }
-    methods: [GET]
+calculator_subtract:
+    path: /subtract/
+    defaults: { _controller: AppBundle:Calculator:subtract }
+
 
 calculator_multiply:
     path: /multiply
