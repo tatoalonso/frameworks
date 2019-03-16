@@ -2,32 +2,33 @@
 
 namespace MyApp\Component\Calculator;
 
+
 class Calculator
 {
 
 
-    public function add( $number1, $number2)
+    public function add( int $number1, int $number2):int
     {
         return $number1 + $number2;
     }
 
-    public function subtract( $number1,  $number2)
+    public function subtract(int  $number1, int $number2):int
     {
         return $number1 - $number2;
     }
 
-    public function multiply( $number1,  $number2)
+    public function multiply(int $number1,int  $number2) :int
     {
         return $number1 * $number2;
     }
 
-    public function divide( $number1,  $number2)
+    public function divide(int  $number1, int $number2): ?float
     {
-        if ($number2 == 0) {
-            return 0;
+        if ($number2 === 0) {
+            return null;
         }
 
-        return $number1 / $number2;
+        return (float) $number1 / $number2;
     }
 
 }
